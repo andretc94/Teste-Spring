@@ -1,0 +1,18 @@
+server:
+  port: "${port:8080}"
+  servlet:
+    context-path: /desafio-service
+spring:
+  application:
+    name: desafio-service
+  datasource:
+    platform: mysql
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/desafio-service?createDatabaseIfNotExist=true
+    username: root
+    password: 1234
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
